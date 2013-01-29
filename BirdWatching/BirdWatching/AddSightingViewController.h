@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddSightingViewController : UITableViewController
+@class BirdSighting;
+
+@interface AddSightingViewController : UITableViewController <UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextField *birdNameInput;
+
+@property (weak, nonatomic) IBOutlet UITextField *locationInput;
+
+@property (strong, nonatomic) BirdSighting *birdSighting;
 
 @end
